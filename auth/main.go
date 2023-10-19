@@ -9,4 +9,9 @@ func main() {
 
 func db() {
 	fmt.Println("db")
+	te()
+}
+
+func te() {
+	fmt.Println("te")
 }
