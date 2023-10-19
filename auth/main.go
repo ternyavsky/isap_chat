@@ -1,17 +1,18 @@
 package main
 
-import "fmt"
+import (
+	models "auth/db"
+
+	"gorm.io/driver/sqlite"
+	"gorm.io/gorm"
+)
 
 func main() {
-	print("jdk")
-	db()
-}
+	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+	if err != nil {
+		panic(err)
+	}
 
-func db() {
-	fmt.Println("db")
-	te()
-}
-
-func te() {
-	fmt.Println("te")
+	db.AutoMigrate(&models.User{}, &models.Chat{}, &models.Message{})
+	print("success")
 }
