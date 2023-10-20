@@ -15,7 +15,10 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
     //регистрации конечных точек для обмена сообщениями через протокол Stomp
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        WebSocketMessageBrokerConfigurer.super.registerStompEndpoints(registry);
+        //отправная точка всех подключений к веб-сайту
+        registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
+
+
 
     }
 
@@ -23,6 +26,13 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
     //настройки брокера сообщений
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        WebSocketMessageBrokerConfigurer.super.configureMessageBroker(registry);
+        //префикс, который будет отправлять данные на сервер
+        registry.setApplicationDestinationPrefixes("/app");
+        registry.enableSimpleBroker("chatroom", "user");// url 1-чата 2-пользователя
+        registry.setUserDestinationPrefix("/user");
+
+
+
+
     }
 }
