@@ -1,0 +1,80 @@
+
+h1{
+    font-size: 96px;
+    font-weight: 900;
+}
+
+h2{
+    font-size: 64px;
+    font-weight: 900;
+}
+
+h3{
+    font-size: 48px;
+    font-weight: 900;
+}
+
+
+/* Баннер-header */
+
+.Header{
+    background: url(../bg-header.png) no-repeat center;
+    width: 100%;
+    height: 950px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+
+.header__container{
+    display: grid;
+    justify-items: center;
+}
+
+.Header_logo{
+    margin-top: 52px;
+    margin-bottom: 75px;
+}
+
+.Header_text__container{
+    text-align: center;
+}
+
+.header_text2{
+    margin-bottom: 16px;
+}
+
+.Header_button__container{
+    margin-top: 250px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.Header_button {
+    background-color: transparent;
+    border-radius: 50px;
+    border: 4px solid #ffffff;
+    font-weight: 900;
+    font-size: 32px;
+    padding: 7px 50px;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+}
+.Header_button:hover {
+    transform: scale(1.05);
+    color: #0045c5;
+    border-color: #0045c5;
+}
+
+
+.Header_social_icons{
+    display: flex;
+    gap: 23px;
+    margin-top: 54px;
+}
