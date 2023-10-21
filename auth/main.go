@@ -1,8 +1,10 @@
 package main
 
 import (
-	models "auth/db"
+	"auth/handlers/users"
+	models "auth/models"
 
+	"github.com/gin-gonic/gin"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -12,7 +14,13 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
 	db.AutoMigrate(&models.User{}, &models.Chat{}, &models.Message{})
-	print("success")
+
+	// query.CreateUser("Dim", "diman123")
+	println("log after create")
+
+	router := gin.Default()
+	router.POST("/registration", users.CreateUser)
+
+	router.Run("localhost:8000")
 }
