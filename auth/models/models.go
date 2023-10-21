@@ -1,11 +1,11 @@
-package db
+package models
 
 type User struct {
 	Base
 	Username string `gorm:"unique" json:"username"`
 	Password string `json:"password"`
 	ImgURL   string `json:"img_url"`
-	Chats    []Chat `gorm:"many2many:user_chats;" json:"chats"`
+	Chats    []Chat `gorm:"many2many:chat_members;" json:"chat_members"`
 }
 
 type Message struct {
@@ -20,5 +20,5 @@ type Message struct {
 type Chat struct {
 	Base
 	Users []User `gorm:"many2many:chat_members;" json:"chat_members"`
-	Title string `json:"title"`
+	Title string `gorm:"unique" json:"title"`
 }
