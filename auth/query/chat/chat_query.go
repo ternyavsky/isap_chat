@@ -3,6 +3,8 @@ package query
 import (
 	"auth/exceptions"
 	"auth/models"
+	"errors"
+	"fmt"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
@@ -26,6 +28,16 @@ func CreateChat(title string, users []string) (result any, exception map[string]
 	return chat, nil
 }
 
-func GetAllChats(){
-	
+func GetChat(id uint16) (result any, exception map[string]any) {
+	db, _ := gorm.Open(sqlite.Open("test.db"))
+
+	var chat models.Chat
+
+	if err := db.Model(&models.Chat{}).Preload("Users").First(&chat, id).Error; err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
+		exception = exceptions.RecordNotFound("Chat")
+		return nil, exception
+	}
+	fmt.Println(chat.Users)
+	return chat, nil
+
 }

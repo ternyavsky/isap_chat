@@ -8,23 +8,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Login(c *gin.Context) {
-	var user models.User
-	c.BindJSON(&user)
-	instance, err := query.Login(user.Username, user.Password)
-	if err != nil {
-		c.IndentedJSON(401, gin.H{
-			"status": 401,
-			"error":  "Неверный логин или пароль",
-		})
-		return
-	}
-	c.IndentedJSON(200, gin.H{
-		"status": 200,
-		"user":   instance,
-	})
-}
-
 func CreateUser(c *gin.Context) {
 	var user models.User
 	c.BindJSON(&user)
@@ -58,4 +41,16 @@ func GetUser(c *gin.Context) {
 		"user":   instance,
 	})
 
+}
+
+func UpdateUser(c *gin.Context) {
+
+}
+
+func GetAllUsers(c *gin.Context) {
+	users := query.GetAllUsers()
+	c.IndentedJSON(200, gin.H{
+		"status": 200,
+		"users":  users,
+	})
 }
