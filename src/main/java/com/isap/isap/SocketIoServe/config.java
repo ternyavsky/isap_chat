@@ -30,35 +30,59 @@ public class config implements WebSocketMessageBrokerConfigurer{
   //определяет максимальный размер буфера, который используется для записи данных на стороне сервера
   private int writeBufferWaterWarkHigh = -1;
 
+  //
+  public  boolean isTcpNoDelay(){
+    return tcpNoDelay;
+  }
+  public void setTcpNoDelay(boolean tcpNoDelay){
+    this.tcpNoDelay = tcpNoDelay;
+  }
 
 
+  public void settcpSendBufferSize(boolean tcpSendBufferSize){
+    this.tcpReceiveBufferSize = tcpReceiveBufferSize;
+  }
+  public int gettcpSendBufferSize(){
+    return tcpReceiveBufferSize;
+  }
+  public void settcpKeepAlive(boolean tcpKeepAlive){
+    this.tcpKeepAlive = tcpKeepAlive;
+  }
+  public boolean gettcpKeepAlive(){
+    return tcpKeepAlive;
+  }
 
+  public int getSoLinger() {
+    return soLinger;
+  }
 
+  public void setSoLinger(int soLinger) {
+    this.soLinger = soLinger;
+  }
 
+  public int getAcceptBackLog() {
+    return acceptBackLog;
+  }
 
+  public void setAcceptBackLog(int acceptBackLog) {
+    this.acceptBackLog = acceptBackLog;
+  }
 
+  public int getWriteBufferWaterWarkLow() {
+    return writeBufferWaterWarkLow;
+  }
 
+  public void setWriteBufferWaterWarkLow(int writeBufferWaterWarkLow) {
+    this.writeBufferWaterWarkLow = writeBufferWaterWarkLow;
+  }
 
+  public int getWriteBufferWaterWarkHigh() {
+    return writeBufferWaterWarkHigh;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  public void setWriteBufferWaterWarkHigh(int writeBufferWaterWarkHigh) {
+    this.writeBufferWaterWarkHigh = writeBufferWaterWarkHigh;
+  }
 
   @Override
 
