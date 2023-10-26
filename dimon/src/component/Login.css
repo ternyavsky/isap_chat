@@ -1,0 +1,101 @@
+body {
+    background-color: #434343;
+}
+
+.Isap_logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 52px;
+    margin-bottom: 41px;
+}
+
+.Login__container {
+    height: 674px;
+    width: 828px;
+    background-color: #313131;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.Login_title {
+    padding-top: 51px;
+    padding-bottom: 51px;
+}
+
+.Login_title_text {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.Login_form {
+    text-align: center;
+}
+
+.Login_form__nickname {
+    margin-bottom: 29px;
+}
+
+.Login_form__password {
+    margin-bottom: 24px;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #313131;
+    border-radius: 30px;
+    width: 80%;
+    padding: 30px;
+    display: block;
+    outline: none;
+    appearance: none;
+    margin: auto;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+::placeholder {
+    font-weight: 900;
+    font-size: 24px;
+}
+
+
+label[for="name"],
+label[for="password"] {
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.Login_button {
+    padding: 10px 50px 10px 50px;
+    background-color: transparent;
+    border: 4px solid white;
+    border-radius: 50px;
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+
+}
+
+.Login_button:hover {
+    color: rgb(81, 81, 81);
+    border-color: rgb(83, 83, 83);
+}
+
+.href_style {
+    font-size: 24px;
+    font-weight: 900;
+    color: #A033FF;
+}
+
+.Login_to_reg {
+    margin-top: 15px;
+}
+
+.Icons {
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
