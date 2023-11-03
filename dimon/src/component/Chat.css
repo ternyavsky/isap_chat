@@ -1,0 +1,141 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.Chat{
+    background-color: #282828;
+    display: flex;
+}
+
+.Chat_menu{
+    width: 500px;
+    height: 100vh;
+    background-color: #3E3E3E;
+    position: relative;
+}
+
+.Profile_Search{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100px;
+    background-color: #373737;
+}
+
+.Profile_icon{
+    display: flex;
+    align-items: center;
+}
+
+.Profile_icon img{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    left: 20px;
+    object-fit: cover;
+}
+
+.Search{
+    display: flex;
+    align-items: center;
+}
+
+.Chat_search{
+    margin: 0 auto;
+    width: 280px;
+    padding-left: 20px;
+    height: 50px;
+    background-color: #282828;
+    border: none;
+    border-radius: 50px;
+    color: #8F8989;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/* Isap logo */
+
+.Logo__container{
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    background-color: #373737;
+}
+
+/* Иди нахуй уебище */
+
+.Status_bar{
+    position: absolute;
+    width: 100vw;
+    height: 100px;
+    background-color: #302F2F;
+}
+
+.Status_bar_but{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Status_icon img{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    left: 30px;
+    object-fit: cover;
+}
+
+.Username_text{
+    margin-left: 60px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.user__container{
+    display: flex;
+}
+
+.status{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.online_text{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.online{
+    margin-left: 60px;
+    border-radius: 50px;
+    width: 10px;
+    height: 10px;
+    background-color: #00FF44;
+}
+
+.status_circle{
+    border-radius: 50px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.User_parametres{
+    display: block;
+    float: right;
+    margin-right: 25px;
+}

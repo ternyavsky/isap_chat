@@ -20,18 +20,18 @@ export default function Registration() {
                         <form action="#/">
                             <div className="Reg_form__nickname">
                                 <div className="nickname_title">
-                                    <label for="name">НИК</label>
-                                    <input type="text" placeholder="Придумайте ваш ник" />
+                                    <label for="name" className='reg_lab_nick'>НИК</label>
+                                    <input type="text" placeholder="Придумайте ваш ник" className='reg_inp_nick'/>
                                 </div>
                             </div>
                             <div className="Reg_form__password">
                                 <div className="password_title">
-                                    <label for="password">ПАРОЛЬ</label>
-                                    <input type="password" placeholder="Придумайте ваш пароль" />
+                                    <label for="password" className='reg_lab_pas'>ПАРОЛЬ</label>
+                                    <input type="password" placeholder="Придумайте ваш пароль" className='reg_inp_pas'/>
                                 </div>
                                 <div className="reg_password_title">
-                                    <label for="password">ПОВТОРИТЕ ПАРОЛЬ</label>
-                                    <input type="password" placeholder="Повторите ваш пароль" />
+                                    <label for="password" className='reg_lab_pas'>ПОВТОРИТЕ ПАРОЛЬ</label>
+                                    <input type="password" placeholder="Повторите ваш пароль" className='reg_inp_pas'/>
                                 </div>
                             </div>
                         </form>

@@ -40,8 +40,8 @@ body {
     margin-bottom: 24px;
 }
 
-input[type="text"],
-input[type="password"] {
+.log_inp_nick,
+.log_inp_pas {
     border: 1px solid #313131;
     border-radius: 30px;
     width: 80%;
@@ -54,14 +54,8 @@ input[type="password"] {
     font-size: 24px;
 }
 
-::placeholder {
-    font-weight: 900;
-    font-size: 24px;
-}
-
-
-label[for="name"],
-label[for="password"] {
+.log_lab_nick,
+.log_inp_pas {
     font-weight: 900;
     font-size: 24px;
 }

@@ -20,14 +20,14 @@ export default function Login() {
                         <form action="#/">
                             <div className="Login_form__nickname">
                                 <div className="nickname_title">
-                                    <label for="name">НИК</label>
-                                    <input type="text" placeholder="Введите ваш ник" />
+                                    <label for="name" className='log_lab_nick'>НИК</label>
+                                    <input type="text" placeholder="Введите ваш ник"  className='log_inp_nick'/>
                                 </div>
                             </div>
                             <div className="Login_form__password">
                                 <div className="password_title">
-                                    <label for="password">ПАРОЛЬ</label>
-                                    <input type="password" placeholder="Введите ваш пароль" />
+                                    <label for="password" className='log_lab_pas'>ПАРОЛЬ</label>
+                                    <input type="password" placeholder="Введите ваш пароль" className='log_inp_pas'/>
                                 </div>
                             </div>
                         </form>

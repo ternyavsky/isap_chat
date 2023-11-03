@@ -10,7 +10,7 @@ body {
 }
 
 .Reg__container {
-    height: 724px;
+    height: 744px;
     width: 828px;
     background-color: #313131;
     margin: auto;
@@ -40,8 +40,8 @@ body {
     margin-bottom: 24px;
 }
 
-input[type="text"],
-input[type="password"] {
+.reg_inp_nick,
+.reg_inp_pas {
     border: 1px solid #313131;
     border-radius: 30px;
     width: 80%;
@@ -54,14 +54,8 @@ input[type="password"] {
     font-size: 24px;
 }
 
-::placeholder {
-    font-weight: 900;
-    font-size: 24px;
-}
-
-
-label[for="name"],
-label[for="password"] {
+.reg_lab_nick,
+.reg_lab_pas {
     font-weight: 900;
     font-size: 24px;
 }
