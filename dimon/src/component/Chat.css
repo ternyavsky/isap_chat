@@ -1,27 +1,33 @@
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
     display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+}
 
-.Chat{
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Оформление чата */
+
+.Chat {
     background-color: #282828;
     display: flex;
 }
 
-.Chat_menu{
+.Chat_menu {
     width: 500px;
     height: 100vh;
     background-color: #3E3E3E;
     position: relative;
 }
 
-.Profile_Search{
+/* Поиск и ава юзера */
+
+.Profile_Search {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -29,12 +35,12 @@ body {
     background-color: #373737;
 }
 
-.Profile_icon{
+.Profile_icon {
     display: flex;
     align-items: center;
 }
 
-.Profile_icon img{
+.Profile_icon img {
     position: absolute;
     width: 80px;
     height: 80px;
@@ -43,12 +49,12 @@ body {
     object-fit: cover;
 }
 
-.Search{
+.Search {
     display: flex;
     align-items: center;
 }
 
-.Chat_search{
+.Chat_search {
     margin: 0 auto;
     width: 280px;
     padding-left: 20px;
@@ -61,33 +67,129 @@ body {
     font-weight: normal;
 }
 
+/* Лист юзеров */
+
+.Users_Groups {
+    height: 100%;
+    margin: 0em;
+    overflow-y: auto;
+}
+
+.Users_Groups::-webkit-scrollbar {
+    background-color: #4d4d4d;
+    width: 15px;
+}
+
+.Users_Groups::-webkit-scrollbar-thumb {
+    background-color: #707070;
+    border-radius: 50px;
+    border: 3px solid #4d4d4d;
+    ;
+}
+
+.User {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #2f2f2f;
+}
+
+.user_line__container {
+    width: 100%;
+}
+
+.User_img {
+    padding-left: 20px;
+}
+
+/* .User_img_status{
+    width: 20px;
+    height: 20px;
+    background-color: #00FF44;
+    border-radius: 50px;
+    position: absolute;
+    transform: translate(60px, -25px);
+    z-index: 100;
+} */
+
+.username__text {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.user_line1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 33px;
+    padding-right: 26px;
+    margin-top: 0;
+}
+
+.user_line2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 33px;
+    padding-right: 26px;
+    margin-top: 0;
+}
+
+.User_settings {
+    display: flex;
+    right: 0;
+    align-items: center;
+    gap: 2px;
+}
+
+.user_circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.user_message {}
+
+.User_img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
 /* Isap logo */
 
-.Logo__container{
+.Logo__container {
     width: 100%;
     height: 110px;
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: #373737;
 }
 
-/* Иди нахуй уебище */
+.isap_logo {
+    display: flex;
+    justify-content: center;
+}
 
-.Status_bar{
+/* Состояние другого юзера в чате */
+.Status_bar {
     position: absolute;
     width: 100vw;
     height: 100px;
     background-color: #302F2F;
 }
 
-.Status_bar_but{
+.Status_bar_but {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
 }
 
-.Status_icon img{
+.Status_icon img {
     position: relative;
     width: 80px;
     height: 80px;
@@ -96,28 +198,28 @@ body {
     object-fit: cover;
 }
 
-.Username_text{
+.Username_text {
     margin-left: 60px;
     font-size: 32px;
     font-weight: bold;
 }
 
-.user__container{
+.user__container {
     display: flex;
 }
 
-.status{
+.status {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.online_text{
+.online_text {
     font-size: 24px;
     font-weight: bold;
 }
 
-.online{
+.online {
     margin-left: 60px;
     border-radius: 50px;
     width: 10px;
@@ -125,7 +227,7 @@ body {
     background-color: #00FF44;
 }
 
-.status_circle{
+.status_circle {
     border-radius: 50px;
     width: 10px;
     height: 10px;
@@ -134,8 +236,37 @@ body {
     margin-bottom: 4px;
 }
 
-.User_parametres{
+
+.User_parametres,
+.parametres__content {
     display: block;
-    float: right;
+    position: fixed;
+    right: 0;
     margin-right: 25px;
+    transform: translateY(-50%);
+}
+
+.parametres__content {
+    display: inline-block;
+    background-color: #1c1c1c;
+    width: 450px;
+    margin-top: 98px;
+    font-size: 24px;
+    font-weight: 900;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.parametres__content ul li {
+    height: 95px;
+}
+
+.parametres__content ul li:hover {
+    background-color: #282828;
+}
+
+.parimg {
+    margin-top: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
